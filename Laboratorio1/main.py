@@ -1,0 +1,16 @@
+def es_par(numero):
+    '''Función para verificar si un número es par'''
+    if numero < 2:
+        return False
+    for i in range(2, numero):
+        if numero % 2 != 0:
+            return False
+    return True
+
+limite = int(input("Ingrese el límite para evaluar números pares: "))
+
+print("Números pares hasta el límite", limite, ":")
+#2 ... 10 2-3-4-5
+for num in range(2, limite + 1):
+    if es_par(num):
+        print(num)
